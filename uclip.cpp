@@ -1,15 +1,4 @@
-﻿/*
-A simple Windows console utility to copy text to clipboard.
-
-IMPORTANT NOTICE: The utility expects the input text to be in UTF-8 encoding.
-
-It makes the utility convenient for using under Cygwin or Git Bash.
-In cmd.exe, it is simpler to stick with `clip.exe` that ships with Windows.
-
-If your text is not in UTF-8, convert it first with something like `iconv`.
-*/
-
-#include "pch.h"
+﻿#include "pch.h"
 
 #include <iomanip>
 #include <iostream>
@@ -40,7 +29,7 @@ int wmain()
 			break;
 		size += read;
 	}
-	
+
 	// Finalize `data`
 	if (size == 0)
 		return 0;
